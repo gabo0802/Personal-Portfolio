@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+hmtl {
+  font-size: 10px;
+  font-family: 'Roboto', Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --colorA: #18206F;
+  --colorB: #17255A;
+  --colorC: #8FF9FF;
+  --colorD: #A2C0E7;
+  --colorE: #8B8B8B;
+}
