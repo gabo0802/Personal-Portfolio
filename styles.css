@@ -13,9 +13,12 @@ hmtl {
 :root {
   --colorA: #18206F;
   --colorB: #17255A;
-  --colorC: #8FF9FF;
+  --colorC: #7ac6ca;
   --colorD: #A2C0E7;
   --colorE: #8B8B8B;
+  --colorF: rgba(162,192,231, 0.5);
+  --text-shadow: 0px 4px 3px rgba(0,0,0,0.2),
+  0px 8px 13px rgba(0,0,0,0.4);
   --background: url(https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg);
   
 }
@@ -27,13 +30,16 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--colorB);
+  background: linear-gradient(
+    var(--colorA), var(--colorB)
+  );
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
 header > h2 {
   color: var(--colorD);
   padding-top: 20px;
+  text-shadow: var(--text-shadow);
 }
 nav {
   width: 50%;
@@ -53,9 +59,12 @@ nav > ul {
 
 nav > ul > li {
   color: var(--colorD);
+  text-shadow: var(--text-shadow);
   margin: 0 0.2rem;
 	padding: 0.2rem;
 	display: block;
+  border-radius: 35%;
+  transition: 0.2s ease-out;
 }
 
 nav > ul > li:hover {
@@ -87,33 +96,54 @@ li > a {
   width: 100%;
   height: 100vh;
   color: var(--colorA);
-  background-image: var(--background);
-  background-color: rgba(0,0,0, 0.7);
-  background-position: center;
   border-bottom: solid var(--colorB) 10px;
-  
 } 
-/* linear-gradient(62deg, var(--colorD) 0%, var(--colorE) 100%); */
+
+.welcome-section::before {
+  content: "";
+  background: var(--background);
+  background-size: cover;
+  position: absolute;
+  background-position: center;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
+.welcome-section >  .initial {
+  background: var(--colorF);
+  text-align: center;
+  opacity: none;
+  border-radius: 10%;
+  padding: 20px; 
+  position: relative;
+}
+ 
+
 h1 {
   font-size: 3em;
   font-family: Cambria;
-  font-style: italic;
   color: black;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+  0px 8px 13px rgba(0,0,0,0.5),
+  0px 18px 23px rgba(0,0,0,0.1);
 }
 
-.welcome-section > p {
+.welcome-section p {
   font-size: 1.5em; 
-  margin-top: 40px;
+  margin-top: 10px;
+  text-shadow: var(--text-shadow);
 }
 .welcome-section > .skills {
-  margin-top: 20px;
   position: absolute;
   padding: 20px;
   bottom: 10px;
   right: 10px;
-  border-radius: 35%;
   color: black;
-  font-weight: 800;
+  font-weight: 500;
+  background: var(--colorF);
+  border-radius: 10%;
 }
 .welcome-section > .skills > .logos {
   margin-top: 10px;
@@ -123,4 +153,37 @@ h1 {
 .welcome-section > .skills > .logos > img {
   max-height: 50px;
   max-width: 50px;
+}
+
+.projects-section {
+  background: var(--colorF);
+  padding: 40px 20px;
+}
+.projects-section h2 {
+  font-size: 2em;
+  font-family: Cambria;
+  color: black;
+  text-decoration: underline;
+  text-align: center;
+  text-shadow: var(--text-shadow);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
