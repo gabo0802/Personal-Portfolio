@@ -6,7 +6,7 @@
 
 hmtl {
   font-size: 10px;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -15,7 +15,7 @@ hmtl {
   --colorB: #17255A;
   --colorC: #7ac6ca;
   --colorD: #A2C0E7;
-  --colorE: #8B8B8B;
+  --colorE: #cacaca;
   --colorF: rgba(162,192,231, 0.5);
   --text-shadow: 0px 4px 3px rgba(0,0,0,0.2),
   0px 8px 13px rgba(0,0,0,0.4);
@@ -27,6 +27,7 @@ header {
   display: flex;
   justify-content: space-evenly;
   position: fixed;
+  font-family: Poppins;
   top: 0;
   left: 0;
   width: 100%;
@@ -63,7 +64,7 @@ nav > ul > li {
   margin: 0 0.2rem;
 	padding: 0.2rem;
 	display: block;
-  border-radius: 35%;
+  border-radius: 5%;
   transition: 0.2s ease-out;
 }
 
@@ -72,14 +73,14 @@ nav > ul > li:hover {
   color: var(--colorB);
   font-weight: 500;
   font-size: 1.2em;
-  border-radius: 35%;
+  border-radius: 5%;
   padding-left: 10px;
   padding-right: 10px;
   cursor: pointer;
 }
 
 nav > ul > li:active {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 li > a {
@@ -92,6 +93,7 @@ li > a {
   position: relative;
   flex-direction: column;
   justify-content: center;
+  font-family: Poppins;
   align-items: center;
   width: 100%;
   height: 100vh;
@@ -123,7 +125,7 @@ li > a {
 
 h1 {
   font-size: 3em;
-  font-family: Cambria;
+  font-weight: 500;
   color: black;
   text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
   0px 8px 13px rgba(0,0,0,0.5),
@@ -141,7 +143,8 @@ h1 {
   bottom: 10px;
   right: 10px;
   color: black;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 0.8em;
   background: var(--colorF);
   border-radius: 10%;
 }
@@ -157,22 +160,27 @@ h1 {
 
 .projects-section {
   background: var(--colorF);
-  padding: 40px 20px;
+  padding: 40px 20px 10px 20px;
+  border-bottom: solid var(--colorB) 10px;
+  font-family: Poppins;
+
 }
 .projects-section h2 {
   font-size: 2em;
-  font-family: Cambria;
+  margin-top: 60px;
+  font-weight: 500;
   color: black;
   text-decoration: underline;
   text-align: center;
   text-shadow: var(--text-shadow);
+  margin-bottom: 50px;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
-  width: 100%;
+  grid-gap: 2rem;
+  width: 90%;
   max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 6rem;
@@ -186,4 +194,137 @@ h1 {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.project-tile {
+  background: var(--colorE);
+  border-radius: 14px;
+  box-shadow:  20px 20px 60px #d3d2d2,
+             -20px -20px 60px #dddddd;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  transition: 0.2s ease-out;
+}
+
+.project-tile:hover {
+  transform:scale(1.05);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+.project-tile img {
+  display: block;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2%;
+  padding-bottom: 5%
+}
+
+.project-tile p {
+  display: block;
+  font-size: 1.5em;
+  text-align: left;
+  padding-left: 40px;
+  font-family: Arial;
+  font-weight: 600;
+  padding-top: 10px;
+  font-style: italic;
+}
+
+
+.project-link {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 5%;
+  padding: 5px;
+  transition: 0.2s ease-out;
+  color: black;
+  max-height: 20%;
+}
+
+
+.project-tile .project-link:hover {
+  text-decoration: none;
+  border-radius: 5%;
+  transform:scale(1.1);
+  border: solid 1px black;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+
+}
+.project-tile > a > img {
+  max-height: 25px;
+  max-width: 25px;
+}
+
+.contact-section {
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: Poppins;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 20vh;
+  background: var(--colorD);
+}
+
+.contact-buttons {
+  margin: 20px 0;
+}
+.contact-link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background: var(--colorA);
+  text-shadow: 1px 1px 1px rgba(0,0,0, 10);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  margin: 0 10px;
+  padding: 7px 12px;
+  border: solid 2px var(--colorA);
+  border-radius: 5%;
+  transition: 0.2s ease-out;
+}
+
+.contact-link:hover {
+  background: var(--colorD);
+  color: black;
+  text-shadow: 1px 1px 1px rgba(0,0,0, 10);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+.contact-link:active {
+  font-weight: 500;
+  background: var(--colorD);
+  color: black;
+  border: solid 2px var(--colorA);
+  text-shadow: 1px 1px 1px rgba(0,0,0, 10);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+footer {
+  font-family: Poppins;
+  color: var(--colorC);
+  background: linear-gradient(
+    var(--colorA),var(--colorB)
+  );
+}
+
+address {
+  display: block;
+  position: relative;
+  margin-left: 10px;
+  padding-top: 5px;
+  
 }
