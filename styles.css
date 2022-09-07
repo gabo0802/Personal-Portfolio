@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-hmtl {
-  font-size: 10px;
+html {
+  font-size: 16px;
   font-family: Poppins, sans-serif;
   scroll-behavior: smooth;
 }
@@ -27,7 +27,6 @@ header {
   display: flex;
   justify-content: space-evenly;
   position: fixed;
-  font-family: Poppins;
   top: 0;
   left: 0;
   width: 100%;
@@ -162,7 +161,6 @@ h1 {
   background: var(--colorF);
   padding: 40px 20px 10px 20px;
   border-bottom: solid var(--colorB) 10px;
-  font-family: Poppins;
 
 }
 .projects-section h2 {
@@ -211,6 +209,7 @@ h1 {
 .project-tile:hover {
   transform:scale(1.05);
   box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  text-decoration: underline overline 2px;
 }
 
 .project-tile img {
@@ -234,7 +233,8 @@ h1 {
   font-family: Arial;
   font-weight: 600;
   padding-top: 10px;
-  font-style: italic;
+  transition: 0.2s ease-out;
+  
 }
 
 
@@ -270,7 +270,6 @@ h1 {
   padding-top: 50px;
   padding-left: 20px;
   padding-right: 20px;
-  font-family: Poppins;
   display: block;
   justify-content: center;
   align-items: center;
@@ -314,7 +313,6 @@ h1 {
 }
 
 footer {
-  font-family: Poppins;
   color: var(--colorC);
   background: linear-gradient(
     var(--colorA),var(--colorB)
